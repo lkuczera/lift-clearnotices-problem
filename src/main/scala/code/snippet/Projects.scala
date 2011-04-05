@@ -19,11 +19,11 @@ class Projects {
 	
 	def add() = {
 		"name=project_name" #> textElem(name) &
-		"name=project_key" #> textElem(key) &
-		"name=project_desc" #> (textareaElem(desc) ++ SHtml.hidden(addProject)) 
+		"name=project_key" #> (textElem(key) ++ SHtml.hidden(addProject)) 
 	}
 	
 	def addProject() = {
+		S.clearCurrentNotices
 		if(name.length < 3) S.error("project_name", "name too short")
 		if(key.length <3) S.error("project_key", "project key too short")
 	}

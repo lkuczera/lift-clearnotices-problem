@@ -1,19 +1,11 @@
 package code.snippet
+import net.liftweb._
+import http.js._
+import JsCmds._
+import JE.Call
+import util.Helpers._
+import http.SHtml._
 
 object Main {
-	private def doPost = {
-		println("sleeping")
-		Thread.sleep(3000)
-		Call("unblock").cmd
-	}
-		
-	private def block = {
-		println()
-		println("calling block message")
-		println()
-		Call("blockMessage")
-	}
-		
-	def buttons = "#id1" #> ajaxButton("OK", block,() => doPost) &
-		"#id2" #> ajaxButton("Cancel", Call("unblock"), () => Noop)
+	
 }

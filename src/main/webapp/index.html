@@ -13,19 +13,18 @@
 </head_merge>
 
 <p>
-<span class="lift:helloWorld.howdy"> Welcome to aStory Workstation at <span id="time">Time goes here</span></span>
-  
-</p>
-<input id="test" type="submit" value="Show Dialog" />
-<div id="question" style="display: none; cursor: default">
-	<form class="lift:form.ajax">
-		<h2>Really delete ?</h2>
-		<div class="lift:Main.buttons" >
-			<input type="button" id="id1" value="ok" />
-			<input type="button" id="id2" value="cancel" /><br/>
-		</div>
-	</form>
-</div>
+ 	<form class="lift:form.ajax">
+    	<div class="lift:Projects.add" >
+    		<div id="add_project_div" >
+	     		<label for="project_name">Project Name:</label><span class="lift:Msg?id=project_name&errorClass=error;">error</span><br/>
+	     		<input id="project_name" name="project_name" /><br/>
+	     		<label for="project_key">Project Key:</label><span class="lift:Msg?id=project_key&errorClass=error;">error</span><br/>
+	     		<input id="project_key" name="project_key" /><br/>
+	     		<input type="submit" /><br/>
+     		</div>
+    	</div>
+    	</form>
+
 </div>
 </body>
 </html>
